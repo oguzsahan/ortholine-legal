@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortholine - Gizlilik Politikası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c5530;
+            text-align: center;
+            border-bottom: 3px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2c5530;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+        .highlight {
+            background-color: #e8f5e8;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            margin: 15px 0;
+        }
+        .contact-info {
+            background-color: #f0f8f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        ul, ol {
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .date {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ortholine Uygulaması<br>Gizlilik Politikası</h1>
+        
+        <div class="highlight">
+            <strong>Son Güncelleme:</strong> 19 Eylül 2025<br>
+            <strong>Yürürlük Tarihi:</strong> 19 Eylül 2025
+        </div>
+
+        <h2>1. Giriş</h2>
+        <p>Ortholine uygulaması ("Uygulama"), ortodontist doktorların hasta takibi yapabilmesi için geliştirilmiş bir mobil uygulamadır. Bu gizlilik politikası, uygulamayı kullanırken toplanan kişisel verilerin nasıl işlendiği, saklandığı ve korunduğu hakkında bilgi vermektedir.</p>
+
+        <h2>2. Veri Sorumlusu</h2>
+        <p>Bu uygulamanın veri sorumlusu, uygulamayı kullanan ortodontist doktordur. Her doktor kendi hastalarının verilerinden sorumludur.</p>
+
+        <h2>3. Toplanan Veriler</h2>
+        
+        <h3>3.1 Doktor Bilgileri</h3>
+        <ul>
+            <li>Ad ve soyad</li>
+            <li>E-posta adresi (giriş için)</li>
+            <li>Şifre (şifrelenmiş olarak)</li>
+            <li>Klinik bilgileri</li>
+        </ul>
+
+        <h3>3.2 Hasta Bilgileri</h3>
+        <ul>
+            <li>Ad ve soyad</li>
+            <li>Telefon numarası</li>
+            <li>Doğum tarihi</li>
+            <li>Tedavi başlangıç tarihi</li>
+            <li>Hasta durumu bilgileri</li>
+            <li>Tedavi notları</li>
+            <li>Tedavi planları</li>
+        </ul>
+
+        <h3>3.3 Görsel Veriler</h3>
+        <ul>
+            <li>Hasta fotoğrafları (kamera izni ile çekilen)</li>
+            <li>Tedavi öncesi/sonrası fotoğrafları</li>
+            <li>Profil fotoğrafları</li>
+        </ul>
+
+        <h3>3.4 Finansal Veriler</h3>
+        <ul>
+            <li>Gelir/gider kayıtları</li>
+            <li>Tedavi ücretleri</li>
+            <li>Ödeme durumu bilgileri</li>
+        </ul>
+
+        <h2>4. Verilerin Kullanım Amaçları</h2>
+        <p>Toplanan veriler yalnızca aşağıdaki amaçlarla kullanılır:</p>
+        <ul>
+            <li>Ortodontik tedavi sürecinin takibi</li>
+            <li>Hasta kayıtlarının yönetimi</li>
+            <li>Tedavi planlarının oluşturulması ve takibi</li>
+            <li>Finansal kayıtların tutulması</li>
+            <li>İstatistiksel analiz ve raporlama</li>
+            <li>Uygulama işlevselliğinin sağlanması</li>
+        </ul>
+
+        <h2>5. İzinler ve Kullanım Amaçları</h2>
+        
+        <h3>5.1 Kamera İzni (android.permission.CAMERA)</h3>
+        <div class="highlight">
+            <strong>Kullanım Amacı:</strong> Hasta fotoğraflarının çekilmesi<br>
+            <strong>Veri Saklama:</strong> Fotoğraflar cihazda ve güvenli Firebase Storage'da saklanır<br>
+            <strong>Paylaşım:</strong> Fotoğraflar hiçbir üçüncü tarafla paylaşılmaz
+        </div>
+
+        <h3>5.2 İnternet Erişimi</h3>
+        <p>Verilerin Firebase veritabanı ile senkronizasyonu için kullanılır.</p>
+
+        <h3>5.3 Depolama İzni</h3>
+        <p>Çekilen fotoğrafların geçici olarak cihazda saklanması için kullanılır.</p>
+
+        <h2>6. Veri Güvenliği</h2>
+        <p>Verilerinizin güvenliği için aşağıdaki önlemler alınmıştır:</p>
+        <ul>
+            <li><strong>Şifreleme:</strong> Tüm veriler aktarım sırasında SSL/TLS ile şifrelenir</li>
+            <li><strong>Firebase Güvenliği:</strong> Google Firebase'in endüstri standardı güvenlik protokolleri kullanılır</li>
+            <li><strong>Erişim Kontrolü:</strong> Her doktor sadece kendi hastalarının verilerine erişebilir</li>
+            <li><strong>Kimlik Doğrulama:</strong> Güvenli e-posta/şifre sistemi</li>
+            <li><strong>Yetkilendirme:</strong> Firestore güvenlik kuralları ile veri erişimi kontrol edilir</li>
+        </ul>
+
+        <h2>7. Veri Paylaşımı</h2>
+        <p>Kişisel verileriniz aşağıdaki durumlar dışında hiçbir üçüncü tarafla paylaşılmaz:</p>
+        <ul>
+            <li>Yasal yükümlülükler gereği</li>
+            <li>Mahkeme kararı ile</li>
+            <li>Kullanıcının açık rızası ile</li>
+        </ul>
+
+        <h3>7.1 Hizmet Sağlayıcıları</h3>
+        <p>Uygulama aşağıdaki üçüncü taraf hizmetleri kullanır:</p>
+        <ul>
+            <li><strong>Google Firebase:</strong> Veri saklama ve kimlik doğrulama</li>
+            <li><strong>Adapty:</strong> Abonelik yönetimi</li>
+            <li><strong>Google Play Store / App Store:</strong> Uygulama dağıtımı</li>
+        </ul>
+
+        <h2>8. Veri Saklama Süresi</h2>
+        <ul>
+            <li><strong>Hasta Verileri:</strong> Doktor tarafından silinene kadar</li>
+            <li><strong>Doktor Hesabı:</strong> Hesap silinene kadar</li>
+            <li><strong>Fotoğraflar:</strong> Manuel olarak silinene kadar</li>
+            <li><strong>Finansal Kayıtlar:</strong> Yasal saklama süreleri gereği 10 yıl</li>
+        </ul>
+
+        <h2>9. Kullanıcı Hakları</h2>
+        <p>KVKK kapsamında aşağıdaki haklarınız bulunmaktadır:</p>
+        <ul>
+            <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+            <li>İşlenen kişisel verileriniz hakkında bilgi talep etme</li>
+            <li>Kişisel verilerinizin işlenme amacını öğrenme</li>
+            <li>Kişisel verilerinizin düzeltilmesini isteme</li>
+            <li>Kişisel verilerinizin silinmesini isteme</li>
+            <li>İşlenen verilerin aktarıldığı üçüncü kişileri bilme</li>
+        </ul>
+
+        <h2>10. Çocukların Gizliliği</h2>
+        <p>Uygulamamız 13 yaşından küçük çocuklardan bilerek kişisel bilgi toplamaz. Eğer 13 yaşından küçük bir çocuğun verilerini topladığımızı öğrenirsek, bu verileri derhal sileriz.</p>
+
+        <h2>11. Abonelik ve Ödeme Bilgileri</h2>
+        <p>Premium paket abonelikleri Adapty üzerinden yönetilir:</p>
+        <ul>
+            <li>Ödeme bilgileri Google Play Store/App Store tarafından işlenir</li>
+            <li>Abonelik durumu bilgileri Adapty'de saklanır</li>
+            <li>Kredi kartı bilgilerine uygulama erişmez</li>
+        </ul>
+
+        <h2>12. Uluslararası Veri Aktarımı</h2>
+        <p>Verileriniz Google Firebase sunucularında saklanır. Firebase, verileri ABD ve diğer ülkelerdeki sunucularda saklayabilir. Bu aktarımlar, uygun güvenlik önlemleri ile gerçekleştirilir.</p>
+
+        <h2>13. Çerezler ve Takip Teknolojileri</h2>
+        <p>Uygulama aşağıdaki teknolojileri kullanır:</p>
+        <ul>
+            <li><strong>Firebase Analytics:</strong> Uygulama kullanım istatistikleri</li>
+            <li><strong>Crash Reporting:</strong> Uygulama hatalarının tespiti</li>
+            <li><strong>Local Storage:</strong> Kullanıcı tercihlerinin saklanması</li>
+        </ul>
+
+        <h2>14. Veri İhlali Durumunda</h2>
+        <p>Olası bir veri ihlali durumunda:</p>
+        <ul>
+            <li>Durum 72 saat içinde ilgili otoritelere bildirilir</li>
+            <li>Etkilenen kullanıcılar bilgilendirilir</li>
+            <li>Gerekli güvenlik önlemleri alınır</li>
+        </ul>
+
+        <h2>15. Politika Değişiklikleri</h2>
+        <p>Bu gizlilik politikası gerektiğinde güncellenebilir. Önemli değişiklikler uygulama içinde duyurulur. Politikanın güncel versiyonu her zaman bu sayfada bulunur.</p>
+
+        <h2>16. Yasal Dayanak</h2>
+        <p>Kişisel verilerin işlenmesi aşağıdaki yasal dayanaklara dayanır:</p>
+        <ul>
+            <li><strong>Açık Rıza:</strong> Uygulama kullanımı için verilen rıza</li>
+            <li><strong>Hukuki Yükümlülük:</strong> Tıbbi kayıt tutma yükümlülüğü</li>
+            <li><strong>Meşru Menfaat:</strong> Ortodontik tedavi hizmeti sunma</li>
+        </ul>
+
+        <h2>17. Veri Güvenliği Önlemleri</h2>
+        <h3>17.1 Teknik Önlemler</h3>
+        <ul>
+            <li>End-to-end şifreleme</li>
+            <li>Güvenli API bağlantıları</li>
+            <li>Düzenli güvenlik güncellemeleri</li>
+            <li>Erişim loglarının tutulması</li>
+        </ul>
+
+        <h3>17.2 İdari Önlemler</h3>
+        <ul>
+            <li>Veri erişim politikaları</li>
+            <li>Personel eğitimleri</li>
+            <li>Düzenli güvenlik denetimleri</li>
+        </ul>
+
+        <h2>18. Kullanıcı Kontrolleri</h2>
+        <p>Uygulama içinden aşağıdaki işlemleri yapabilirsiniz:</p>
+        <ul>
+            <li>Hasta verilerini düzenleme</li>
+            <li>Fotoğrafları silme</li>
+            <li>Hesabınızı silme</li>
+            <li>Veri dışa aktarma (premium paketlerde)</li>
+        </ul>
+
+        <h2>19. Üçüncü Taraf Entegrasyonları</h2>
+        
+        <h3>19.1 Google Firebase</h3>
+        <ul>
+            <li><strong>Amaç:</strong> Veri saklama, kimlik doğrulama, analitik</li>
+            <li><strong>Gizlilik Politikası:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+        </ul>
+
+        <h3>19.2 Adapty</h3>
+        <ul>
+            <li><strong>Amaç:</strong> Abonelik ve ödeme yönetimi</li>
+            <li><strong>Gizlilik Politikası:</strong> <a href="https://adapty.io/privacy" target="_blank">Adapty Privacy Policy</a></li>
+        </ul>
+
+        <h2>20. Bölgesel Uyumluluk</h2>
+        
+        <h3>20.1 KVKK Uyumluluğu (Türkiye)</h3>
+        <p>Bu uygulama Türkiye Cumhuriyeti Kişisel Verilerin Korunması Kanunu'na (KVKK) uygun olarak tasarlanmıştır.</p>
+
+        <h3>20.2 GDPR Uyumluluğu (AB)</h3>
+        <p>Avrupa Birliği kullanıcıları için GDPR gereksinimlerine uygun veri işleme yapılır.</p>
+
+        <h2>21. Veri Silme ve Hesap Kapatma</h2>
+        <p>Hesabınızı kapatmak istediğinizde:</p>
+        <ol>
+            <li>Uygulama içinden "Hesabı Sil" seçeneğini kullanın</li>
+            <li>Tüm hasta verileri 30 gün içinde silinir</li>
+            <li>Yasal saklama yükümlülüğü olan veriler (finansal kayıtlar) kanuni süreler boyunca saklanır</li>
+            <li>Silme işlemi geri alınamaz</li>
+        </ol>
+
+        <h2>22. Veri Güvenliği İhlali Bildirimi</h2>
+        <p>Herhangi bir güvenlik açığı tespit ederseniz, lütfen derhal bizimle iletişime geçin.</p>
+
+        <h2>23. Sorumlu Veri İşleme</h2>
+        <p>Doktorlar olarak aşağıdaki sorumluluklarınız bulunmaktadır:</p>
+        <ul>
+            <li>Hasta rızasının alınması</li>
+            <li>Verilerin amacına uygun kullanılması</li>
+            <li>Güvenli şifre kullanımı</li>
+            <li>Cihaz güvenliğinin sağlanması</li>
+        </ul>
+
+        <h2>24. Teknik Detaylar</h2>
+        
+        <h3>24.1 Veri Şifreleme</h3>
+        <ul>
+            <li>TLS 1.3 ile aktarım şifrelemesi</li>
+            <li>AES-256 ile veri şifrelemesi</li>
+            <li>SHA-256 hash algoritması</li>
+        </ul>
+
+        <h3>24.2 Sunucu Güvenliği</h3>
+        <ul>
+            <li>Google Cloud Platform güvenlik standartları</li>
+            <li>ISO 27001 sertifikalı altyapı</li>
+            <li>SOC 2 Type II uyumluluğu</li>
+        </ul>
+
+        <h2>25. Analitik ve Performans</h2>
+        <p>Uygulama performansını iyileştirmek için aşağıdaki anonim veriler toplanır:</p>
+        <ul>
+            <li>Uygulama kullanım istatistikleri</li>
+            <li>Hata raporları (kişisel bilgi içermez)</li>
+            <li>Performans metrikleri</li>
+        </ul>
+
+        <h2>26. Yaş Sınırlaması</h2>
+        <p>Bu uygulama 18 yaş ve üzeri sağlık profesyonelleri için tasarlanmıştır. 18 yaş altındaki bireylerden kişisel veri toplanmaz.</p>
+
+        <h2>27. Veri Taşınabilirliği</h2>
+        <p>Verilerinizi başka bir sisteme aktarmak istiyorsanız:</p>
+        <ul>
+            <li>Uygulama içinden veri dışa aktarma özelliğini kullanabilirsiniz</li>
+            <li>JSON formatında hasta verilerinizi indirebilirsiniz</li>
+            <li>Fotoğrafları ayrı olarak indirebilirsiniz</li>
+        </ul>
+
+        <h2>28. Otomatik Karar Verme</h2>
+        <p>Uygulama, kullanıcılar hakkında otomatik karar verme veya profilleme yapmaz. Tüm tedavi kararları doktor tarafından verilir.</p>
+
+        <h2>29. Veri Minimizasyonu</h2>
+        <p>Sadece tedavi takibi için gerekli olan minimum veriler toplanır. Gereksiz veri toplama yapılmaz.</p>
+
+        <h2>30. Güncellemeler ve Bildirimler</h2>
+        <p>Gizlilik politikası güncellemeleri:</p>
+        <ul>
+            <li>Uygulama içinde bildirim ile duyurulur</li>
+            <li>E-posta ile bilgilendirme yapılır</li>
+            <li>Önemli değişiklikler için yeniden rıza alınır</li>
+        </ul>
+
+        <div class="contact-info">
+            <h2>📞 İletişim Bilgileri</h2>
+            <p><strong>Veri Koruma Sorumlusu:</strong> [Adınız Soyadınız]</p>
+            <p><strong>E-posta:</strong> [email-adresiniz@domain.com]</p>
+            <p><strong>Telefon:</strong> [Telefon numaranız]</p>
+            <p><strong>Adres:</strong> [İş adresiniz]</p>
+            
+            <h3>Başvuru Yöntemleri:</h3>
+            <ul>
+                <li>E-posta ile başvuru</li>
+                <li>Uygulama içi iletişim formu</li>
+                <li>Yazılı başvuru (posta ile)</li>
+            </ul>
+            
+            <p><strong>Yanıt Süresi:</strong> En geç 30 gün içinde</p>
+        </div>
+
+        <h2>31. Yürürlük</h2>
+        <p>Bu gizlilik politikası, uygulamayı kullanmaya başladığınız andan itibaren yürürlüktedir. Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsınız.</p>
+
+        <div class="date">
+            <p><strong>Bu gizlilik politikası 19 Eylül 2025 tarihinde güncellenmiştir.</strong></p>
+            <p>Versiyon: 1.0</p>
+        </div>
+    </div>
+</body>
+</html>
