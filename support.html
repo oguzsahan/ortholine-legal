@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ortholine - Destek ve Yardım</title>
+    <title>Ortholine - Destek</title>
     <style>
         * {
             margin: 0;
@@ -12,11 +12,10 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            color: #2c3e50;
+            background: #f8f9fa;
         }
 
         .container {
@@ -27,47 +26,44 @@
 
         .header {
             text-align: center;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
         }
 
         .logo {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 20px;
             margin: 0 auto 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 32px;
-            color: white;
             font-weight: bold;
         }
 
         h1 {
-            color: #2c3e50;
             font-size: 2.5em;
             margin-bottom: 10px;
             font-weight: 700;
         }
 
         .subtitle {
-            color: #7f8c8d;
             font-size: 1.2em;
-            margin-bottom: 30px;
+            opacity: 0.9;
         }
 
         .content {
-            background: rgba(255, 255, 255, 0.95);
+            background: white;
             padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
 
         .section {
@@ -75,30 +71,30 @@
         }
 
         .section h2 {
-            color: #2c3e50;
+            color: #667eea;
             font-size: 1.8em;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-            display: inline-block;
+            border-bottom: 2px solid #e9ecef;
+            font-weight: 600;
         }
 
-        .contact-info {
+        .contact-card {
             background: #f8f9fa;
-            padding: 25px;
-            border-radius: 15px;
-            border-left: 5px solid #667eea;
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
             margin: 20px 0;
         }
 
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
-            padding: 10px;
+            margin-bottom: 20px;
+            padding: 15px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         .contact-item:last-child {
@@ -108,7 +104,7 @@
         .contact-icon {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: #667eea;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -133,12 +129,30 @@
             font-size: 1.1em;
         }
 
+        .btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn:hover {
+            background: #5a6fd8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
         .faq-item {
             background: #f8f9fa;
             margin-bottom: 15px;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
         .faq-question {
@@ -159,55 +173,35 @@
             padding: 20px;
             color: #555;
             line-height: 1.6;
+            display: none;
         }
 
-        .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
-        }
-
-        .btn-email {
-            background: linear-gradient(135deg, #e74c3c, #c0392b);
-            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
-        }
-
-        .btn-email:hover {
-            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6);
+        .faq-answer.active {
+            display: block;
         }
 
         .footer {
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: rgba(255, 255, 255, 0.8);
+            padding: 40px 20px;
+            color: #6c757d;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
 
-        .social-links {
+        .footer-links {
             margin: 20px 0;
         }
 
-        .social-links a {
-            color: rgba(255, 255, 255, 0.8);
+        .footer-links a {
+            color: #667eea;
             text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
+            margin: 0 15px;
+            font-weight: 500;
         }
 
-        .social-links a:hover {
-            color: white;
+        .footer-links a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
@@ -216,7 +210,7 @@
             }
             
             .header, .content {
-                padding: 20px;
+                padding: 30px 20px;
             }
             
             h1 {
@@ -233,24 +227,6 @@
                 margin-bottom: 10px;
             }
         }
-
-        .highlight {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            font-weight: 700;
-        }
-
-        .version-info {
-            background: #e8f4fd;
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid #3498db;
-            margin: 20px 0;
-            font-size: 0.9em;
-            color: #2c3e50;
-        }
     </style>
 </head>
 <body>
@@ -263,8 +239,8 @@
 
         <div class="content">
             <div class="section">
-                <h2>📞 İletişim Bilgileri</h2>
-                <div class="contact-info">
+                <h2>İletişim</h2>
+                <div class="contact-card">
                     <div class="contact-item">
                         <div class="contact-icon">📧</div>
                         <div class="contact-text">
@@ -279,34 +255,27 @@
                             <div class="contact-value">24-48 saat içinde</div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">🌍</div>
-                        <div class="contact-text">
-                            <div class="contact-label">Desteklenen Diller</div>
-                            <div class="contact-value">Türkçe, İngilizce</div>
-                        </div>
-                    </div>
                 </div>
                 
                 <div style="text-align: center; margin: 30px 0;">
-                    <a href="mailto:apparyaofficial@gmail.com?subject=Ortholine Destek Talebi&body=Merhaba,%0D%0A%0D%0AUygulama: Ortholine%0D%0AVersiyon: 1.5.0%0D%0ASorun: " class="btn btn-email">
-                        📧 E-posta Gönder
+                    <a href="mailto:apparyaofficial@gmail.com?subject=Ortholine Destek Talebi&body=Merhaba,%0D%0A%0D%0AUygulama: Ortholine%0D%0AVersiyon: 1.5.0%0D%0ASorun: " class="btn">
+                        E-posta Gönder
                     </a>
                 </div>
             </div>
 
             <div class="section">
-                <h2>❓ Sık Sorulan Sorular</h2>
+                <h2>Sık Sorulan Sorular</h2>
                 
                 <div class="faq-item">
-                    <div class="faq-question">Uygulama nasıl çalışır?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Uygulama nasıl çalışır?</div>
                     <div class="faq-answer">
                         Ortholine, ortodonti doktorlarının hasta takibini dijitalleştiren kapsamlı bir uygulamadır. Hasta kayıtları, fotoğraf takibi, gelir/gider yönetimi ve detaylı istatistikler sunar.
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Abonelik paketleri nelerdir?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Abonelik paketleri nelerdir?</div>
                     <div class="faq-answer">
                         <strong>Premium:</strong> 100 hasta kapasitesi<br>
                         <strong>Ultimate:</strong> 250 hasta kapasitesi<br>
@@ -316,43 +285,32 @@
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Verilerim güvende mi?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Verilerim güvende mi?</div>
                     <div class="faq-answer">
-                        Evet! Firebase güvenlik altyapısı kullanıyoruz. Tüm veriler şifrelenir ve KVKK uyumlu olarak saklanır. Düzenli yedekleme sistemi ile verileriniz korunur.
+                        Evet! Firebase güvenlik altyapısı kullanıyoruz. Tüm veriler güvenli sunucularda saklanır ve KVKK uyumlu olarak işlenir. Düzenli yedekleme sistemi ile verileriniz korunur.
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Çoklu klinik desteği var mı?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Çoklu klinik desteği var mı?</div>
                     <div class="faq-answer">
                         Evet! Birden fazla klinik yönetebilir, klinik bazlı hasta grupları oluşturabilir ve merkezi raporlama yapabilirsiniz.
                     </div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Teknik destek nasıl alabilirim?</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Teknik destek nasıl alabilirim?</div>
                     <div class="faq-answer">
                         <strong>apparyaofficial@gmail.com</strong> adresine e-posta gönderin. Sorununuzu detaylı açıklayın ve uygulama versiyonunu belirtin. 24-48 saat içinde yanıt alacaksınız.
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question">Uygulama güncellemeleri nasıl gelir?</div>
-                    <div class="faq-answer">
-                        Uygulama mağazalarından (App Store, Google Play) otomatik güncellemeler gelir. Yeni özellikler ve iyileştirmeler düzenli olarak yayınlanır.
                     </div>
                 </div>
             </div>
 
             <div class="section">
-                <h2>��️ Sorun Giderme</h2>
-                <div class="version-info">
-                    <strong>Mevcut Versiyon:</strong> 1.5.0 (Build 15)<br>
-                    <strong>Son Güncelleme:</strong> Adapty SDK entegrasyonu ve premium abonelik sistemi
-                </div>
-
+                <h2>Sorun Giderme</h2>
+                
                 <div class="faq-item">
-                    <div class="faq-question">Uygulama açılmıyor</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Uygulama açılmıyor</div>
                     <div class="faq-answer">
                         1. Uygulamayı kapatıp yeniden açın<br>
                         2. Cihazınızı yeniden başlatın<br>
@@ -362,7 +320,7 @@
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Abonelik satın alamıyorum</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Abonelik satın alamıyorum</div>
                     <div class="faq-answer">
                         1. İnternet bağlantınızı kontrol edin<br>
                         2. App Store/Google Play hesabınızı kontrol edin<br>
@@ -372,63 +330,44 @@
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Verilerim kayboldu</div>
+                    <div class="faq-question" onclick="toggleFAQ(this)">Verilerim kayboldu</div>
                     <div class="faq-answer">
                         Verileriniz Firebase'de güvenle saklanır. E-posta ile iletişime geçin, hesabınızı kontrol edip verilerinizi geri yükleyelim.
                     </div>
                 </div>
             </div>
-
-            <div class="section">
-                <h2>📋 Destek Talebi Gönderirken</h2>
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; border-left: 4px solid #28a745;">
-                    <p><strong>Lütfen şu bilgileri ekleyin:</strong></p>
-                    <ul style="margin-top: 10px; padding-left: 20px;">
-                        <li>Uygulama versiyonu</li>
-                        <li>Cihaz modeli ve işletim sistemi</li>
-                        <li>Karşılaştığınız sorunun detaylı açıklaması</li>
-                        <li>Hata mesajı varsa ekran görüntüsü</li>
-                        <li>Adımları tekrarlayıp tekrarlamadığınız</li>
-                    </ul>
-                </div>
-            </div>
         </div>
 
         <div class="footer">
-            <div class="social-links">
-                <a href="mailto:apparyaofficial@gmail.com">📧 E-posta</a>
-                <a href="https://github.com/apparya/ortholine-legal" target="_blank">�� GitHub</a>
+            <div class="footer-links">
+                <a href="privacy_policy.html">Gizlilik Politikası</a>
+                <a href="account_deletion.html">Hesap Silme</a>
             </div>
             <p>&copy; 2024 Apparya. Tüm hakları saklıdır.</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">
-                <a href="privacy_policy.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Gizlilik Politikası</a> | 
-                <a href="account_deletion.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Hesap Silme</a>
-            </p>
         </div>
     </div>
 
     <script>
-        // FAQ açma/kapama işlevi
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const isOpen = answer.style.display === 'block';
-                
-                // Tüm cevapları kapat
-                document.querySelectorAll('.faq-answer').forEach(ans => {
-                    ans.style.display = 'none';
-                });
-                
-                // Tıklanan cevabı aç/kapat
-                answer.style.display = isOpen ? 'none' : 'block';
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const isOpen = answer.classList.contains('active');
+            
+            // Tüm FAQ'leri kapat
+            document.querySelectorAll('.faq-answer').forEach(ans => {
+                ans.classList.remove('active');
             });
-        });
+            
+            // Tıklanan FAQ'yi aç/kapat
+            if (!isOpen) {
+                answer.classList.add('active');
+            }
+        }
 
         // Sayfa yüklendiğinde ilk FAQ'yi aç
         document.addEventListener('DOMContentLoaded', () => {
             const firstAnswer = document.querySelector('.faq-answer');
             if (firstAnswer) {
-                firstAnswer.style.display = 'block';
+                firstAnswer.classList.add('active');
             }
         });
     </script>
