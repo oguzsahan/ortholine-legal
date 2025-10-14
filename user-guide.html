@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortholine - Kullanım Kılavuzu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h4 {
+            color: #555;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature-card h4 {
+            color: white;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95em;
+        }
+
+        .package-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .package-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .package-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .package-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .package-table tr:hover {
+            background-color: #f0f0ff;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 5px;
+        }
+
+        .badge-free {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .badge-premium {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .badge-ultimate {
+            background: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .badge-enterprise {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .success-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .step-container {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+        }
+
+        .step-container h4 {
+            color: #667eea;
+            margin-top: 0;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 30px;
+        }
+
+        .toc {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .toc a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .package-table {
+                font-size: 0.9em;
+            }
+
+            .package-table th,
+            .package-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 Ortholine</h1>
+            <p>Ortodontistler için Akıllı Hasta Takip Sistemi</p>
+        </header>
+
+        <div class="content">
+            <div class="toc">
+                <h3>📑 İçindekiler</h3>
+                <ul>
+                    <li><a href="#giris">Giriş</a></li>
+                    <li><a href="#ozellikler">Özellikler</a></li>
+                    <li><a href="#paketler">Abonelik Paketleri</a></li>
+                    <li><a href="#baslangic">Başlangıç Rehberi</a></li>
+                    <li><a href="#hasta-yonetimi">Hasta Yönetimi</a></li>
+                    <li><a href="#istatistikler">İstatistikler</a></li>
+                    <li><a href="#gelir-gider">Gelir-Gider Takibi</a></li>
+                    <li><a href="#ayarlar">Ayarlar ve Özelleştirme</a></li>
+                    <li><a href="#sss">Sık Sorulan Sorular</a></li>
+                </ul>
+            </div>
+
+            <section id="giris">
+                <h2>🎯 Ortholine Nedir?</h2>
+                <p>
+                    Ortholine, ortodontistlerin hasta takip süreçlerini kolaylaştırmak için tasarlanmış, 
+                    modern ve kullanıcı dostu bir mobil uygulamadır. Hastalarınızı organize etmekten 
+                    gelir-gider takibine, detaylı istatistiklerden klinik yönetimine kadar tüm ihtiyaçlarınızı 
+                    tek bir platformda karşılar.
+                </p>
+
+                <div class="success-box">
+                    <strong>✨ Neden Ortholine?</strong>
+                    <ul>
+                        <li>📊 Gerçek zamanlı istatistikler ve analizler</li>
+                        <li>💰 Kapsamlı gelir-gider yönetimi</li>
+                        <li>🏥 Çoklu klinik desteği</li>
+                        <li>📱 Hem iOS hem Android'de çalışır</li>
+                        <li>☁️ Bulut tabanlı - verileriniz her zaman güvende</li>
+                        <li>🔄 Cross-platform abonelik desteği</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="ozellikler">
+                <h2>⚡ Temel Özellikler</h2>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>👥 Hasta Yönetimi</h4>
+                        <p>Hastalarınızı kolayca ekleyin, düzenleyin ve takip edin. Detaylı hasta profilleri, 
+                        tedavi durumları ve notlar ile tüm bilgiler elinizin altında.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>🏥 Klinik Yönetimi</h4>
+                        <p>Birden fazla klinikte çalışıyorsanız, tüm kliniklerinizi tek bir yerden yönetin. 
+                        Hastaları kliniklere göre filtreleyip organize edin.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>📊 Gelişmiş İstatistikler</h4>
+                        <p>Aylık, yıllık ve genel istatistiklerinizi görüntüleyin. Tedavi kabul oranları, 
+                        fiyatlandırma analizleri ve klinik bazlı raporlar.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>💰 Gelir-Gider Takibi</h4>
+                        <p>Mali işlemlerinizi detaylı kategorilere ayırarak takip edin. Aylık raporlar, 
+                        kategori bazlı analizler ve gelir-gider grafikleri.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>📸 Görsel Takip</h4>
+                        <p>Hasta fotoğrafları ekleyin ve tedavi sürecini görsel olarak takip edin. 
+                        (Premium paketlerde)</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>🔔 Bildirimler</h4>
+                        <p>Önemli gelişmelerden haberdar olun. Yeni özellikler ve güncellemeler hakkında 
+                        anlık bildirimler alın.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>🔍 Akıllı Arama</h4>
+                        <p>Hastalarınızı isim, telefon veya TC kimlik numarası ile hızlıca bulun. 
+                        Klinik ve durum filtreleri ile arama sonuçlarını daraltın.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h4>📤 Veri Dışa Aktarma</h4>
+                        <p>Tüm hasta verilerinizi JSON formatında dışa aktarın. Yedekleme ve veri taşıma 
+                        işlemlerini kolayca yapın.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="paketler">
+                <h2>💎 Abonelik Paketleri</h2>
+                
+                <p>Ortholine, farklı ihtiyaçlara göre tasarlanmış 4 farklı abonelik paketi sunar:</p>
+
+                <table class="package-table">
+                    <thead>
+                        <tr>
+                            <th>Paket</th>
+                            <th>Hasta Limiti</th>
+                            <th>Özellikler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge badge-free">Ücretsiz</span></td>
+                            <td><strong>10 hasta</strong></td>
+                            <td>
+                                • Temel hasta yönetimi<br>
+                                • Klinik yönetimi<br>
+                                • Temel istatistikler<br>
+                                • Gelir-gider takibi
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-premium">Premium</span></td>
+                            <td><strong>100 hasta</strong></td>
+                            <td>
+                                • Tüm ücretsiz özellikler<br>
+                                • Görsel takip (fotoğraf ekleme)<br>
+                                • Gelişmiş istatistikler<br>
+                                • Öncelikli destek
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-ultimate">Ultimate</span></td>
+                            <td><strong>300 hasta</strong></td>
+                            <td>
+                                • Tüm Premium özellikler<br>
+                                • Daha yüksek hasta kapasitesi<br>
+                                • Gelişmiş raporlama<br>
+                                • Özel analizler
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-enterprise">Enterprise</span></td>
+                            <td><strong>Sınırsız</strong></td>
+                            <td>
+                                • Tüm Ultimate özellikler<br>
+                                • Sınırsız hasta kapasitesi<br>
+                                • Özel entegrasyonlar<br>
+                                • Kurumsal destek
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>ℹ️ Önemli Bilgiler:</strong>
+                    <ul>
+                        <li>Abonelikler hem iOS hem Android'de geçerlidir (cross-platform)</li>
+                        <li>Bir platformda satın aldığınız abonelik, diğer platformda da kullanılabilir</li>
+                        <li>Abonelik yönetimi App Store veya Google Play üzerinden yapılır</li>
+                        <li>Paket değişikliği istediğiniz zaman yapılabilir</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="baslangic">
+                <h2>🚀 Başlangıç Rehberi</h2>
+
+                <h3>1. Kayıt Olma</h3>
+                <div class="step-container">
+                    <h4>Adım 1: Uygulamayı İndirin</h4>
+                    <p>Ortholine uygulamasını App Store (iOS) veya Google Play Store (Android)'dan indirin.</p>
+                </div>
+
+                <div class="step-container">
+                    <h4>Adım 2: Hesap Oluşturun</h4>
+                    <ol>
+                        <li>Uygulamayı açın ve "Kayıt Ol" butonuna tıklayın</li>
+                        <li>İsim, e-posta ve şifre bilgilerinizi girin</li>
+                        <li>Kullanım şartlarını kabul edin</li>
+                        <li>"Kayıt Ol" butonuna tıklayın</li>
+                    </ol>
+                </div>
+
+                <div class="step-container">
+                    <h4>Adım 3: Profil Ayarları</h4>
+                    <p>İlk girişten sonra profil ayarlarınızı düzenleyin:</p>
+                    <ul>
+                        <li>Profil fotoğrafı ekleyin</li>
+                        <li>Telefon numaranızı girin</li>
+                        <li>Bildirim tercihlerinizi ayarlayın</li>
+                    </ul>
+                </div>
+
+                <h3>2. İlk Kliniğinizi Ekleyin</h3>
+                <div class="step-container">
+                    <ol>
+                        <li>Ana ekranda hamburger menüye (☰) tıklayın</li>
+                        <li>"Klinikler" seçeneğini seçin</li>
+                        <li>Sağ alt köşedeki (+) butonuna tıklayın</li>
+                        <li>Klinik bilgilerini girin (isim, adres, telefon, e-posta)</li>
+                        <li>"Kaydet" butonuna tıklayın</li>
+                    </ol>
+                </div>
+
+                <h3>3. İlk Hastanızı Ekleyin</h3>
+                <div class="step-container">
+                    <ol>
+                        <li>Ana ekranda sağ alt köşedeki (+) butonuna tıklayın</li>
+                        <li>Hasta bilgilerini girin:
+                            <ul>
+                                <li>İsim Soyisim (zorunlu)</li>
+                                <li>TC Kimlik No</li>
+                                <li>Telefon</li>
+                                <li>Muayene tarihi</li>
+                                <li>Klinik seçimi</li>
+                                <li>Fiyat bilgisi</li>
+                                <li>Tedavi durumu</li>
+                            </ul>
+                        </li>
+                        <li>"Kaydet" butonuna tıklayın</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="hasta-yonetimi">
+                <h2>👥 Hasta Yönetimi</h2>
+
+                <h3>Hasta Ekleme</h3>
+                <p>Ana ekrandaki (+) butonuna tıklayarak yeni hasta ekleyebilirsiniz. Zorunlu alan sadece isim-soyisimdir.</p>
+
+                <h3>Hasta Düzenleme</h3>
+                <p>Hasta kartına tıklayarak hasta detay sayfasına gidin. Sağ üst köşedeki düzenle (✏️) butonuna tıklayın.</p>
+
+                <h3>Hasta Durumları</h3>
+                <ul>
+                    <li><strong>Muayene:</strong> Hasta muayene edildi, henüz fiyat verilmedi</li>
+                    <li><strong>Fiyat Verildi:</strong> Hastaya tedavi fiyatı bildirildi</li>
+                    <li><strong>Tedavi Başladı:</strong> Hasta tedaviye başladı</li>
+                    <li><strong>Tedavi Bitti:</strong> Tedavi tamamlandı</li>
+                    <li><strong>Red:</strong> Hasta tedaviyi reddetti</li>
+                </ul>
+
+                <h3>Hasta Arama ve Filtreleme</h3>
+                <div class="step-container">
+                    <h4>Arama</h4>
+                    <p>Üst kısımdaki arama çubuğunu kullanarak hastalarınızı arayabilirsiniz:</p>
+                    <ul>
+                        <li>İsim ile arama</li>
+                        <li>Telefon numarası ile arama</li>
+                        <li>TC Kimlik No ile arama</li>
+                    </ul>
+                </div>
+
+                <div class="step-container">
+                    <h4>Filtreleme</h4>
+                    <p>Hastaları klinik ve durum filtreleri ile daraltabilirsiniz:</p>
+                    <ul>
+                        <li>Klinik filtresi: Belirli bir kliniğin hastalarını görün</li>
+                        <li>Durum filtresi: Belirli durumdaki hastaları görün</li>
+                        <li>Her iki filtreyi birlikte kullanabilirsiniz</li>
+                    </ul>
+                </div>
+
+                <h3>Fotoğraf Ekleme (Premium)</h3>
+                <div class="warning-box">
+                    <strong>⚠️ Premium Özellik</strong><br>
+                    Hasta fotoğrafları eklemek için Premium, Ultimate veya Enterprise paketlerinden birine sahip olmanız gerekmektedir.
+                </div>
+                <p>Hasta detay sayfasında "Fotoğraf Ekle" butonuna tıklayarak hasta fotoğrafları ekleyebilirsiniz.</p>
+
+                <h3>Hasta Silme</h3>
+                <p>Hasta detay sayfasında sağ üst köşedeki çöp kutusu (🗑️) ikonuna tıklayarak hastayı silebilirsiniz. 
+                Bu işlem geri alınamaz!</p>
+            </section>
+
+            <section id="istatistikler">
+                <h2>📊 İstatistikler ve Analizler</h2>
+
+                <h3>Ana Ekran İstatistik Kartları</h3>
+                <p>Ana ekranın üst kısmında kaydırılabilir istatistik kartları bulunur. Bu kartlar şunları gösterir:</p>
+                <ul>
+                    <li>Aylık muayene edilen hasta sayısı</li>
+                    <li>Fiyat verilen hasta sayısı</li>
+                    <li>Tedavi kabul oranı</li>
+                    <li>En popüler klinikler</li>
+                    <li>Duyurular ve bilgilendirmeler</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 İpucu:</strong> İstatistik kartlarının içeriği ve renkleri dinamik olarak yapılandırılabilir. 
+                    Bazı kartlara tıklayarak ilgili sayfaya gidebilirsiniz.
+                </div>
+
+                <h3>Gelişmiş İstatistikler Sayfası</h3>
+                <p>Hamburger menüden (☰) "Gelişmiş İstatistikler" seçeneğini seçerek detaylı analizlere ulaşabilirsiniz:</p>
+
+                <h4>📅 Aylık İstatistikler</h4>
+                <ul>
+                    <li>Toplam muayene sayısı</li>
+                    <li>Fiyat verilen hasta sayısı</li>
+                    <li>Tedavi kabul oranı (%)</li>
+                    <li>Ortalama tedavi fiyatı</li>
+                    <li>En popüler klinik</li>
+                </ul>
+
+                <h4>📆 Yıllık İstatistikler</h4>
+                <ul>
+                    <li>Yıllık hasta sayısı</li>
+                    <li>Yıllık gelir</li>
+                    <li>Aylık dağılım grafikleri</li>
+                    <li>Klinik bazlı karşılaştırmalar</li>
+                </ul>
+
+                <h4>🌍 Genel İstatistikler</h4>
+                <ul>
+                    <li>Toplam hasta sayısı</li>
+                    <li>Tüm zamanların istatistikleri</li>
+                    <li>Klinik performans analizleri</li>
+                </ul>
+            </section>
+
+            <section id="gelir-gider">
+                <h2>💰 Gelir-Gider Takibi</h2>
+
+                <div class="info-box">
+                    <strong>ℹ️ Gelir-Gider Özelliği:</strong><br>
+                    Bu özellik kullanıcı ayarlarından aktifleştirilebilir. Profil ayarlarından "Gelir-Gider Takibi" 
+                    seçeneğini açabilirsiniz.
+                </div>
+
+                <h3>Kategori Yönetimi</h3>
+                <p>İşlemlerinizi organize etmek için kategoriler oluşturabilirsiniz:</p>
+
+                <div class="step-container">
+                    <h4>Kategori Ekleme</h4>
+                    <ol>
+                        <li>"Gelir-Gider" sayfasını açın</li>
+                        <li>"Kategoriler" sekmesine geçin</li>
+                        <li>Sağ alt köşedeki (+) butonuna tıklayın</li>
+                        <li>Kategori adı girin (örn: "Malzeme", "Kira", "Maaş")</li>
+                        <li>Kategori türünü seçin (Gelir/Gider)</li>
+                        <li>"Kaydet" butonuna tıklayın</li>
+                    </ol>
+                </div>
+
+                <h3>Gelir/Gider Kaydı Ekleme</h3>
+                <div class="step-container">
+                    <ol>
+                        <li>"Gelir-Gider" sayfasını açın</li>
+                        <li>Sağ alt köşedeki (+) butonuna tıklayın</li>
+                        <li>İşlem bilgilerini girin:
+                            <ul>
+                                <li>Tür (Gelir/Gider)</li>
+                                <li>Kategori seçimi</li>
+                                <li>Tutar</li>
+                                <li>Tarih</li>
+                                <li>Açıklama (opsiyonel)</li>
+                            </ul>
+                        </li>
+                        <li>"Kaydet" butonuna tıklayın</li>
+                    </ol>
+                </div>
+
+                <h3>Raporlama</h3>
+                <p>Gelir-Gider sayfasında aylık bazda raporlarınızı görüntüleyebilirsiniz:</p>
+                <ul>
+                    <li>Toplam gelir</li>
+                    <li>Toplam gider</li>
+                    <li>Net kar/zarar</li>
+                    <li>Kategori bazlı dağılım</li>
+                    <li>Aylık karşılaştırmalar</li>
+                </ul>
+
+                <h3>Filtreleme ve Arama</h3>
+                <ul>
+                    <li>Ay seçerek belirli bir dönemi görüntüleyin</li>
+                    <li>Kategori filtreleyerek belirli kategorideki işlemleri görün</li>
+                    <li>Tür filtreleyerek sadece gelir veya gider kayıtlarını listeleyin</li>
+                </ul>
+            </section>
+
+            <section id="ayarlar">
+                <h2>⚙️ Ayarlar ve Özelleştirme</h2>
+
+                <h3>Profil Ayarları</h3>
+                <p>Hamburger menüden (☰) "Profil Ayarları"na tıklayarak ayarlarınızı düzenleyebilirsiniz:</p>
+
+                <h4>Hesap Bilgileri</h4>
+                <ul>
+                    <li>Profil fotoğrafı değiştirme</li>
+                    <li>İsim güncelleme</li>
+                    <li>Telefon numarası ekleme/değiştirme</li>
+                    <li>E-posta görüntüleme</li>
+                </ul>
+
+                <h4>Özellik Ayarları</h4>
+                <ul>
+                    <li><strong>Gelir-Gider Takibi:</strong> Bu özelliği açıp kapatabilirsiniz</li>
+                    <li><strong>Bildirimler:</strong> Bildirim izinlerini yönetin</li>
+                </ul>
+
+                <h4>Premium Paket Yönetimi</h4>
+                <ul>
+                    <li>Mevcut paketinizi görün</li>
+                    <li>Hasta limitinizi kontrol edin</li>
+                    <li>Paket değiştirin veya yükseltin</li>
+                    <li>Satın almaları geri yükleyin</li>
+                </ul>
+
+                <h3>Veri Yönetimi</h3>
+                <h4>Veri Dışa Aktarma</h4>
+                <div class="step-container">
+                    <ol>
+                        <li>Profil Ayarları'na gidin</li>
+                        <li>"Verileri Dışa Aktar" butonuna tıklayın</li>
+                        <li>JSON dosyası cihazınıza indirilecektir</li>
+                        <li>Bu dosyayı yedekleme veya başka cihaza aktarma için kullanabilirsiniz</li>
+                    </ol>
+                </div>
+
+                <h4>Şifre Değiştirme</h4>
+                <div class="step-container">
+                    <ol>
+                        <li>Profil Ayarları'na gidin</li>
+                        <li>"Şifre Değiştir" butonuna tıklayın</li>
+                        <li>Mevcut şifrenizi girin</li>
+                        <li>Yeni şifrenizi girin ve onaylayın</li>
+                        <li>"Güncelle" butonuna tıklayın</li>
+                    </ol>
+                </div>
+
+                <h4>Hesap Silme</h4>
+                <div class="warning-box">
+                    <strong>⚠️ Dikkat!</strong><br>
+                    Hesap silme işlemi geri alınamaz. Tüm verileriniz kalıcı olarak silinecektir.
+                </div>
+                <p>Hesabınızı silmek istiyorsanız, Profil Ayarları'ndan "Hesabı Sil" butonuna tıklayabilirsiniz.</p>
+            </section>
+
+            <section id="sss">
+                <h2>❓ Sık Sorulan Sorular</h2>
+
+                <div class="step-container">
+                    <h4>1. Ücretsiz paket ile kaç hasta ekleyebilirim?</h4>
+                    <p>Ücretsiz paket ile maksimum 10 hasta ekleyebilirsiniz. Daha fazla hasta eklemek için 
+                    premium paketlere geçiş yapmanız gerekmektedir.</p>
+                </div>
+
+                <div class="step-container">
+                    <h4>2. iOS'ta satın aldığım aboneliği Android'de kullanabilir miyim?</h4>
+                    <p>Evet! Aynı e-posta adresi ile giriş yaptığınızda, hangi platformda satın almış olursanız olun, 
+                    aboneliğiniz tüm cihazlarınızda geçerli olacaktır.</p>
+                </div>
+
+                <div class="step-container">
+                    <h4>3. Verilerim güvende mi?</h4>
+                    <p>Evet, tüm verileriniz Firebase Cloud Firestore'da şifrelenmiş olarak saklanır. 
+                    Google'ın güvenlik standartları ile korunur.</p>
+                </div>
+
+                <div class="step-container">
+                    <h4>4. Çevrimdışı çalışır mı?</h4>
+                    <p>Hayır, uygulama internet bağlantısı gerektirir. Ancak Firebase'in cache mekanizması 
+                    sayesinde kısa süreli bağlantı kopmaları durumunda verilerinize erişebilirsiniz.</p>
+                </div>
+
+                <div class="step-container">
+                    <h4>5. Aboneliğimi nasıl iptal edebilirim?</h4>
+                    <p>Abonelik yönetimi App Store (iOS) veya Google Play (Android) üzerinden yapılır. 
+                    İlgili mağazanın ayarlar bölümünden aboneliğinizi iptal edebilirsiniz.</p>
+                </div>
+
+                <div class="step-container">
+                    <h4>6. Yanlışlıkla hasta sildim, geri getirebilir miyim?</h4>
+                    <p>Maalesef silinen hastalar geri getirilemez. Bu nedenle silme işlemi yapmadan önce 
+                    emin olmanız önemlidir.</p>
+                </div>
+
+                <div class="step-container">
+                    <h4>7. Birden fazla cihazda kullanabilir miyim?</h4>
+                    <p>Evet, aynı hesap bilgileri ile istediğiniz kadar cihazda oturum açabilirsiniz. 
+                    Verileriniz otomatik olarak senkronize edilir.</p>
+                </div>
+
+                <div class="step-container">
+                    <h4>8. Gelir-Gider özelliğini nasıl aktif edebilirim?</h4>
+                    <p>Profil Ayarları → Özellik Ayarları → Gelir-Gider Takibi seçeneğini açabilirsiniz. 
+                    Bu özellik tüm paketlerde mevcuttur.</p>
+                </div>
+
+                <div class="step-container">
+                    <h4>9. Fotoğraf ekleme özelliği neden çalışmıyor?</h4>
+                    <p>Fotoğraf ekleme Premium, Ultimate veya Enterprise paketlere özel bir özelliktir. 
+                    Ücretsiz pakette bu özellik kullanılamaz.</p>
+                </div>
+
+                <div class="step-container">
+                    <h4>10. Destek almak için nasıl iletişime geçebilirim?</h4>
+                    <p>Uygulama içinden veya e-posta yoluyla destek talebinde bulunabilirsiniz. 
+                    Premium paket kullanıcıları öncelikli destek alır.</p>
+                </div>
+            </section>
+
+            <div class="success-box" style="margin-top: 40px;">
+                <strong>🎉 Başarılı Kullanımlar!</strong>
+                <p>Ortholine kullanımı ile ilgili daha fazla bilgi veya destek için lütfen bizimle iletişime geçin. 
+                Hastalarınızı daha verimli yönetmeniz dileğiyle!</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2024 Ortholine. Tüm hakları saklıdır.</p>
+            <p>Ortodontistler için tasarlandı ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>
