@@ -323,15 +323,21 @@
                     tek bir platformda karşılar.
                 </p>
 
+                <div class="info-box">
+                    <strong>📱 Platform Desteği</strong><br>
+                    Ortholine şu anda <strong>iOS</strong>'ta kullanılabilir durumdadır. 
+                    <strong>Android</strong> versiyonu geliştirme aşamasındadır ve yakında kullanıma sunulacaktır.
+                </div>
+
                 <div class="success-box">
                     <strong>✨ Neden Ortholine?</strong>
                     <ul>
                         <li>📊 Gerçek zamanlı istatistikler ve analizler</li>
                         <li>💰 Kapsamlı gelir-gider yönetimi</li>
                         <li>🏥 Çoklu klinik desteği</li>
-                        <li>📱 Hem iOS hem Android'de çalışır</li>
+                        <li>📱 iOS'ta kullanılabilir (Android yakında)</li>
                         <li>☁️ Bulut tabanlı - verileriniz her zaman güvende</li>
-                        <li>🔄 Cross-platform abonelik desteği</li>
+                        <li>🔄 Cross-platform abonelik desteği (gelecekte)</li>
                     </ul>
                 </div>
             </section>
@@ -365,9 +371,9 @@
                     </div>
 
                     <div class="feature-card">
-                        <h4>📸 Görsel Takip</h4>
-                        <p>Hasta fotoğrafları ekleyin ve tedavi sürecini görsel olarak takip edin. 
-                        (Premium paketlerde)</p>
+                    <h4>📸 Görsel Takip</h4>
+                    <p>Hasta fotoğrafları ekleyin ve tedavi sürecini görsel olarak takip edin. 
+                    (Unlimited pakette)</p>
                     </div>
 
                     <div class="feature-card">
@@ -393,7 +399,7 @@
             <section id="paketler">
                 <h2>💎 Abonelik Paketleri</h2>
                 
-                <p>Ortholine, farklı ihtiyaçlara göre tasarlanmış 4 farklı abonelik paketi sunar:</p>
+                <p>Ortholine, farklı ihtiyaçlara göre tasarlanmış 5 farklı abonelik paketi sunar:</p>
 
                 <table class="package-table">
                     <thead>
@@ -419,7 +425,6 @@
                             <td><strong>100 hasta</strong></td>
                             <td>
                                 • Tüm ücretsiz özellikler<br>
-                                • Görsel takip (fotoğraf ekleme)<br>
                                 • Gelişmiş istatistikler<br>
                                 • Öncelikli destek
                             </td>
@@ -436,12 +441,22 @@
                         </tr>
                         <tr>
                             <td><span class="badge badge-enterprise">Enterprise</span></td>
-                            <td><strong>Sınırsız</strong></td>
+                            <td><strong>Sınırsız hasta</strong></td>
                             <td>
                                 • Tüm Ultimate özellikler<br>
                                 • Sınırsız hasta kapasitesi<br>
                                 • Özel entegrasyonlar<br>
                                 • Kurumsal destek
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-enterprise">Unlimited</span></td>
+                            <td><strong>Sınırsız hasta</strong></td>
+                            <td>
+                                • Tüm Enterprise özellikler<br>
+                                • <strong>Fotoğraf yükleme özelliği</strong><br>
+                                • Görsel hasta takibi<br>
+                                • Gelişmiş görsel arşivleme
                             </td>
                         </tr>
                     </tbody>
@@ -450,10 +465,11 @@
                 <div class="info-box">
                     <strong>ℹ️ Önemli Bilgiler:</strong>
                     <ul>
-                        <li>Abonelikler hem iOS hem Android'de geçerlidir (cross-platform)</li>
-                        <li>Bir platformda satın aldığınız abonelik, diğer platformda da kullanılabilir</li>
-                        <li>Abonelik yönetimi App Store veya Google Play üzerinden yapılır</li>
+                        <li>Abonelikler şu anda iOS App Store üzerinden satın alınabilir</li>
+                        <li>Android sürümü çıktığında abonelikler cross-platform desteklenecektir</li>
+                        <li>Abonelik yönetimi App Store üzerinden yapılır</li>
                         <li>Paket değişikliği istediğiniz zaman yapılabilir</li>
+                        <li><strong>Fotoğraf yükleme özelliği sadece Unlimited pakette mevcuttur</strong></li>
                     </ul>
                 </div>
             </section>
@@ -464,7 +480,7 @@
                 <h3>1. Kayıt Olma</h3>
                 <div class="step-container">
                     <h4>Adım 1: Uygulamayı İndirin</h4>
-                    <p>Ortholine uygulamasını App Store (iOS) veya Google Play Store (Android)'dan indirin.</p>
+                    <p>Ortholine uygulamasını App Store (iOS)'dan indirin. Android sürümü geliştirme aşamasındadır.</p>
                 </div>
 
                 <div class="step-container">
@@ -505,12 +521,12 @@
                         <li>Hasta bilgilerini girin:
                             <ul>
                                 <li>İsim Soyisim (zorunlu)</li>
-                                <li>TC Kimlik No</li>
                                 <li>Telefon</li>
                                 <li>Muayene tarihi</li>
                                 <li>Klinik seçimi</li>
                                 <li>Fiyat bilgisi</li>
                                 <li>Tedavi durumu</li>
+                                <li>Referans adı (opsiyonel)</li>
                             </ul>
                         </li>
                         <li>"Kaydet" butonuna tıklayın</li>
@@ -529,11 +545,12 @@
 
                 <h3>Hasta Durumları</h3>
                 <ul>
-                    <li><strong>Muayene:</strong> Hasta muayene edildi, henüz fiyat verilmedi</li>
-                    <li><strong>Fiyat Verildi:</strong> Hastaya tedavi fiyatı bildirildi</li>
-                    <li><strong>Tedavi Başladı:</strong> Hasta tedaviye başladı</li>
-                    <li><strong>Tedavi Bitti:</strong> Tedavi tamamlandı</li>
-                    <li><strong>Red:</strong> Hasta tedaviyi reddetti</li>
+                    <li><strong>Kayıt Açıldı:</strong> Hasta kaydı oluşturuldu</li>
+                    <li><strong>Aktif Tedavide:</strong> Hasta aktif olarak tedavi görüyor</li>
+                    <li><strong>Tedavisi Bitti:</strong> Tedavi başarıyla tamamlandı</li>
+                    <li><strong>Kurum Dışı İşlem:</strong> Hasta başka bir kurumda işlem yaptırıyor</li>
+                    <li><strong>Dentisyon Takip:</strong> Hastanın dentisyon durumu takip ediliyor</li>
+                    <li><strong>Başka Kliniğe Yönlendirildi:</strong> Hasta başka bir kliniğe sevk edildi</li>
                 </ul>
 
                 <h3>Hasta Arama ve Filtreleme</h3>
@@ -543,7 +560,6 @@
                     <ul>
                         <li>İsim ile arama</li>
                         <li>Telefon numarası ile arama</li>
-                        <li>TC Kimlik No ile arama</li>
                     </ul>
                 </div>
 
@@ -557,10 +573,11 @@
                     </ul>
                 </div>
 
-                <h3>Fotoğraf Ekleme (Premium)</h3>
+                <h3>Fotoğraf Ekleme (Unlimited)</h3>
                 <div class="warning-box">
-                    <strong>⚠️ Premium Özellik</strong><br>
-                    Hasta fotoğrafları eklemek için Premium, Ultimate veya Enterprise paketlerinden birine sahip olmanız gerekmektedir.
+                    <strong>⚠️ Unlimited Özelliği</strong><br>
+                    Hasta fotoğrafları eklemek için <strong>Unlimited</strong> paketine sahip olmanız gerekmektedir. 
+                    Bu özellik diğer paketlerde mevcut değildir.
                 </div>
                 <p>Hasta detay sayfasında "Fotoğraf Ekle" butonuna tıklayarak hasta fotoğrafları ekleyebilirsiniz.</p>
 
@@ -743,9 +760,9 @@
                 </div>
 
                 <div class="step-container">
-                    <h4>2. iOS'ta satın aldığım aboneliği Android'de kullanabilir miyim?</h4>
-                    <p>Evet! Aynı e-posta adresi ile giriş yaptığınızda, hangi platformda satın almış olursanız olun, 
-                    aboneliğiniz tüm cihazlarınızda geçerli olacaktır.</p>
+                    <h4>2. Android sürümü ne zaman çıkacak?</h4>
+                    <p>Android sürümü aktif olarak geliştirilmektedir. Yakın zamanda kullanıma sunulacaktır. 
+                    Çıktığında iOS'ta satın aldığınız abonelikler Android'de de kullanılabilecektir (cross-platform).</p>
                 </div>
 
                 <div class="step-container">
@@ -762,8 +779,8 @@
 
                 <div class="step-container">
                     <h4>5. Aboneliğimi nasıl iptal edebilirim?</h4>
-                    <p>Abonelik yönetimi App Store (iOS) veya Google Play (Android) üzerinden yapılır. 
-                    İlgili mağazanın ayarlar bölümünden aboneliğinizi iptal edebilirsiniz.</p>
+                    <p>Abonelik yönetimi App Store (iOS) üzerinden yapılır. 
+                    App Store ayarlar bölümünden aboneliğinizi iptal edebilirsiniz.</p>
                 </div>
 
                 <div class="step-container">
@@ -786,28 +803,31 @@
 
                 <div class="step-container">
                     <h4>9. Fotoğraf ekleme özelliği neden çalışmıyor?</h4>
-                    <p>Fotoğraf ekleme Premium, Ultimate veya Enterprise paketlere özel bir özelliktir. 
-                    Ücretsiz pakette bu özellik kullanılamaz.</p>
+                    <p>Fotoğraf ekleme sadece <strong>Unlimited</strong> pakete özel bir özelliktir. 
+                    Diğer paketlerde (Ücretsiz, Premium, Ultimate, Enterprise) bu özellik kullanılamaz.</p>
                 </div>
 
                 <div class="step-container">
                     <h4>10. Destek almak için nasıl iletişime geçebilirim?</h4>
-                    <p>Uygulama içinden veya e-posta yoluyla destek talebinde bulunabilirsiniz. 
+                    <p>Destek için <strong>apparyaofficial@gmail.com</strong> adresine e-posta gönderebilirsiniz. 
                     Premium paket kullanıcıları öncelikli destek alır.</p>
                 </div>
             </section>
 
             <div class="success-box" style="margin-top: 40px;">
                 <strong>🎉 Başarılı Kullanımlar!</strong>
-                <p>Ortholine kullanımı ile ilgili daha fazla bilgi veya destek için lütfen bizimle iletişime geçin. 
+                <p>Ortholine kullanımı ile ilgili daha fazla bilgi veya destek için 
+                <strong>apparyaofficial@gmail.com</strong> adresinden bizimle iletişime geçin. 
                 Hastalarınızı daha verimli yönetmeniz dileğiyle!</p>
             </div>
         </div>
 
         <footer class="footer">
-            <p>&copy; 2024 Ortholine. Tüm hakları saklıdır.</p>
+            <p>&copy; 2025 Ortholine. Tüm hakları saklıdır.</p>
             <p>Ortodontistler için tasarlandı ❤️</p>
+            <p>Destek: apparyaofficial@gmail.com</p>
         </footer>
     </div>
 </body>
 </html>
+
