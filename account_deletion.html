@@ -9,127 +9,71 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #2c3e50;
-            background: #f8f9fa;
-        }
-
-        .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
         }
-
-        .header {
-            text-align: center;
-            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-            color: white;
-            padding: 60px 40px;
-            border-radius: 16px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .logo {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            font-weight: bold;
-        }
-
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-
-        .content {
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            color: #e74c3c;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .section h2 {
+        h2 {
             color: #e74c3c;
-            font-size: 1.6em;
+            margin-top: 30px;
             margin-bottom: 15px;
-            font-weight: 600;
         }
-
-        .section h3 {
-            color: #2c3e50;
-            font-size: 1.3em;
-            margin-bottom: 10px;
+        h3 {
+            color: #333;
             margin-top: 20px;
-            font-weight: 600;
+            margin-bottom: 10px;
         }
-
-        .section p {
+        p {
             margin-bottom: 15px;
-            color: #555;
+            text-align: justify;
         }
-
-        .section ul {
+        ul {
+            margin-left: 20px;
             margin-bottom: 15px;
-            padding-left: 20px;
         }
-
-        .section li {
+        li {
             margin-bottom: 8px;
             color: #555;
         }
-
         .warning {
             background: #fff3cd;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             border-left: 4px solid #ffc107;
             margin: 20px 0;
         }
-
         .warning h3 {
             color: #856404;
             margin-bottom: 10px;
         }
-
         .warning p {
             color: #856404;
             margin-bottom: 0;
         }
-
         .steps {
             background: #f8f9fa;
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
             border-left: 4px solid #e74c3c;
             margin: 20px 0;
         }
-
         .step {
             margin-bottom: 15px;
             padding: 10px;
@@ -137,7 +81,6 @@
             border-radius: 6px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         .step-number {
             display: inline-block;
             background: #e74c3c;
@@ -150,60 +93,43 @@
             font-weight: bold;
             margin-right: 10px;
         }
-
         .btn {
             display: inline-block;
             background: #e74c3c;
             color: white;
-            padding: 15px 30px;
+            padding: 12px 24px;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
+            border-radius: 5px;
+            font-weight: 500;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
         }
-
         .btn:hover {
             background: #c0392b;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
         }
-
         .footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px;
             color: #6c757d;
             background: white;
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
         }
-
         .footer-links {
-            margin: 20px 0;
+            margin: 15px 0;
         }
-
         .footer-links a {
             color: #e74c3c;
             text-decoration: none;
             margin: 0 15px;
             font-weight: 500;
         }
-
         .footer-links a:hover {
             text-decoration: underline;
         }
-
         @media (max-width: 768px) {
             .container {
-                padding: 10px;
-            }
-            
-            .header, .content {
-                padding: 30px 20px;
-            }
-            
-            h1 {
-                font-size: 2em;
+                padding: 20px;
             }
         }
     </style>
@@ -242,20 +168,13 @@
     </nav>
 
     <div class="container" style="margin-top: 100px;">
-        <div class="header">
-            <div class="logo">⚠️</div>
-            <h1>Hesap Silme</h1>
-            <p class="subtitle">Hesabınızı ve verilerinizi kalıcı olarak silme</p>
-        </div>
-
-        <div class="content">
+        <h1>Hesap Silme</h1>
             <div class="warning">
                 <h3>⚠️ Önemli Uyarı</h3>
                 <p>Hesabınızı silmek geri alınamaz bir işlemdir. Tüm hasta verileri, fotoğraflar, notlar ve finansal kayıtlar kalıcı olarak silinecektir.</p>
             </div>
 
-            <div class="section">
-                <h2>Silinecek Veriler</h2>
+        <h2>Silinecek Veriler</h2>
                 <p>Hesabınız silindiğinde aşağıdaki veriler kalıcı olarak silinir:</p>
                 <ul>
                     <li>Hesap bilgileriniz (ad, soyad, e-posta, telefon)</li>
@@ -269,8 +188,7 @@
                 </ul>
             </div>
 
-            <div class="section">
-                <h2>Hesap Silme Adımları</h2>
+        <h2>Hesap Silme Adımları</h2>
                 <div class="steps">
                     <div class="step">
                         <span class="step-number">1</span>
@@ -291,8 +209,7 @@
                 </div>
             </div>
 
-            <div class="section">
-                <h2>E-posta İçeriği</h2>
+        <h2>E-posta İçeriği</h2>
                 <p>Hesap silme talebinizde aşağıdaki bilgileri belirtin:</p>
                 <ul>
                     <li>E-posta adresiniz</li>
@@ -302,8 +219,7 @@
                 </ul>
             </div>
 
-            <div class="section">
-                <h2>Alternatif Seçenekler</h2>
+        <h2>Alternatif Seçenekler</h2>
                 <p>Hesabınızı silmek yerine şu seçenekleri değerlendirebilirsiniz:</p>
                 <ul>
                     <li><strong>Veri Temizleme:</strong> Sadece hasta verilerini silin</li>
@@ -312,8 +228,7 @@
                 </ul>
             </div>
 
-            <div class="section">
-                <h2>İletişim</h2>
+        <h2>İletişim</h2>
                 <div style="text-align: center; margin: 30px 0;">
                     <a href="mailto:apparyaofficial@gmail.com?subject=Hesap Silme Talebi&body=Merhaba,%0D%0A%0D%0AHesap silme talebim:%0D%0A%0D%0AE-posta: [E-posta adresinizi yazın]%0D%0ANeden: [Silme nedeninizi yazın]%0D%0A%0D%0AVerilerimin yedeklendiğini ve işlemin geri alınamaz olduğunu anlıyorum.%0D%0A%0D%0Aİyi günler." class="btn">
                         Hesap Silme Talebi Gönder
@@ -321,8 +236,7 @@
                 </div>
             </div>
 
-            <div class="section">
-                <h2>Sık Sorulan Sorular</h2>
+        <h2>Sık Sorulan Sorular</h2>
                 
                 <h3>Hesap silindikten sonra verilerim geri getirilebilir mi?</h3>
                 <p>Hayır, hesap silindikten sonra veriler kalıcı olarak silinir ve geri getirilemez.</p>
@@ -333,14 +247,12 @@
                 <h3>Abonelik ücretim iade edilir mi?</h3>
                 <p>Hesap silme işlemi abonelik iptali anlamına gelmez. Aboneliğinizi ayrıca iptal etmeniz gerekir.</p>
             </div>
-        </div>
-
         <div class="footer">
             <div class="footer-links">
                 <a href="support.html">Destek</a>
                 <a href="privacy_policy.html">Gizlilik Politikası</a>
             </div>
-            <p>&copy; 2024 Apparya. Tüm hakları saklıdır.</p>
+            <p>&copy; 2025 Ortholine. Tüm hakları saklıdır.</p>
         </div>
     </div>
 
