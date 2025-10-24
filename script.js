@@ -200,24 +200,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Pricing Card Hover Effects
-document.addEventListener('DOMContentLoaded', function() {
-    const pricingCards = document.querySelectorAll('.pricing-card');
-    
-    pricingCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.02)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            if (this.classList.contains('featured')) {
-                this.style.transform = 'scale(1.05)';
-            } else {
-                this.style.transform = 'translateY(0) scale(1)';
-            }
-        });
-    });
-});
 
 // Feature Cards Animation on Scroll
 document.addEventListener('DOMContentLoaded', function() {

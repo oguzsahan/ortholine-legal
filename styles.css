@@ -412,95 +412,6 @@ p {
     line-height: 1.6;
 }
 
-/* Pricing Section */
-.pricing {
-    padding: 80px 0;
-    background: var(--bg-primary);
-}
-
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.pricing-card {
-    background: var(--bg-primary);
-    border: 2px solid #e9ecef;
-    border-radius: var(--border-radius-large);
-    padding: 2rem;
-    text-align: center;
-    position: relative;
-    transition: var(--transition);
-}
-
-.pricing-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-medium);
-}
-
-.pricing-card.featured {
-    border-color: var(--primary-color);
-    transform: scale(1.05);
-}
-
-.pricing-badge {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--bg-gradient);
-    color: var(--text-light);
-    padding: 5px 20px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.pricing-header {
-    margin-bottom: 2rem;
-}
-
-.pricing-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: var(--text-primary);
-}
-
-.pricing-price {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.price {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--primary-color);
-}
-
-.period {
-    font-size: 1rem;
-    color: var(--text-secondary);
-}
-
-.pricing-features {
-    margin-bottom: 2rem;
-}
-
-.pricing-features ul {
-    list-style: none;
-    text-align: left;
-}
-
-.pricing-features li {
-    padding: 0.5rem 0;
-    color: var(--text-secondary);
-}
 
 /* Contact Section */
 .contact {
@@ -693,13 +604,6 @@ p {
         grid-template-columns: 1fr;
     }
 
-    .pricing-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .pricing-card.featured {
-        transform: none;
-    }
 
     .contact-content {
         grid-template-columns: 1fr;
@@ -734,8 +638,7 @@ p {
         height: 400px;
     }
 
-    .feature-card,
-    .pricing-card {
+    .feature-card {
         padding: 1.5rem;
     }
 }
