@@ -359,6 +359,60 @@ function toggleFAQ(element) {
 // Make toggleFAQ globally available
 window.toggleFAQ = toggleFAQ;
 
+// Screenshot Slider Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slider-slide');
+    const dots = document.querySelectorAll('.dot');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+        // Remove active class from all slides and dots
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        // Add active class to current slide and dot
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        const nextIndex = (currentSlide + 1) % slides.length;
+        showSlide(nextIndex);
+    }
+
+    function startSlider() {
+        slideInterval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    }
+
+    function stopSlider() {
+        clearInterval(slideInterval);
+    }
+
+    // Add click event listeners to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            stopSlider();
+            startSlider(); // Restart auto-slide
+        });
+    });
+
+    // Start the slider
+    if (slides.length > 0) {
+        startSlider();
+        
+        // Pause slider on hover
+        const sliderContainer = document.querySelector('.slider-container');
+        if (sliderContainer) {
+            sliderContainer.addEventListener('mouseenter', stopSlider);
+            sliderContainer.addEventListener('mouseleave', startSlider);
+        }
+    }
+});
+
 // Form Validation
 function validateForm(form) {
     const inputs = form.querySelectorAll('input[required], textarea[required]');
